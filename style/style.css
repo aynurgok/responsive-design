@@ -271,7 +271,6 @@ body, html {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 55%;
 }
 #contact-area .container .contact-text {
   font-size: 50px;
@@ -400,19 +399,27 @@ body, html {
 }
 
 @media screen and (max-width: 1100px) {
-  header .container, #avatar-area .container, #portfolio-area .container, #footer-area .container {
+  .container {
     width: 100%;
   }
+  #avatar-area {
+    height: unset;
+    padding: 100px 0;
+  }
   #contact-area .container {
-    padding: 1rem 9%;
-    width: 100%;
     text-align: center;
+  }
+  #contact-area .container .contact-text {
+    font-size: 36px;
+  }
+  #contact-area .container form {
+    width: 90%;
+  }
+  #footer-area .container .box {
+    width: 100%;
   }
 }
 @media screen and (max-width: 992px) {
-  #header .container, #avatar-area .container, #portfolio-area .container, #about-area .container, #footer-area .container {
-    width: 100%;
-  }
   #header .container .logo-text {
     font-size: 20px;
   }
@@ -425,18 +432,15 @@ body, html {
     display: none;
   }
   #avatar-area .start-text {
-    font-size: 3.1rem;
+    font-size: 43px;
   }
   #avatar-area .jobs-text {
-    font-size: 1.5rem;
-  }
-  #portfolio-area {
-    width: 100%;
+    font-size: 18px;
+    transform: translateY(20px);
   }
   #portfolio-area .container .box-area {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 50px;
   }
   #about-area .container .text-area {
     display: flex;
@@ -463,12 +467,6 @@ body, html {
   }
 }
 @media screen and (max-width: 768px) {
-  header .container, #avatar-area .container, #portfolio-area .container, #about-area .container, #footer-area .container {
-    width: 100%;
-  }
-  #portfolio-area .container {
-    margin: auto;
-  }
   #portfolio-area .container .box-area {
     display: flex;
     flex-direction: column;
@@ -482,46 +480,10 @@ body, html {
   }
   #about-area .container .buttons {
     margin-top: 50px;
-  }
-  #contact-area .container {
-    width: 100%;
-    text-align: center;
-  }
-}
-@media screen and (max-width: 767px) {
-  header .container, #avatar-area .container, #about-area .container, #footer-area .container {
-    width: 100%;
-  }
-  #portfolio-area .container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  #portfolio-area .container .box-area {
-    display: flex;
-    flex-direction: column;
-  }
-  #about-area .container .text-area {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    padding: 0 10px;
-  }
-  #about-area .container .buttons {
-    margin-top: 50px;
-  }
-  #contact-area .container {
-    text-align: center;
   }
 }
 @media screen and (max-width: 568px) {
-  header .container, #avatar-area .container, #about-area .container, #footer-area .container {
-    width: 100%;
-  }
   #portfolio-area .container {
-    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -542,8 +504,5 @@ body, html {
   }
   #about-area .container .buttons {
     margin-top: 50px;
-  }
-  #contact-area .container {
-    text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */

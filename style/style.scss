@@ -284,7 +284,6 @@ body, html {
         display: flex;
         align-items: center;
         flex-direction: column;
-        width: 55%;
         .contact-text {
             font-size: 50px;
             font-weight: 900;
@@ -427,26 +426,38 @@ body, html {
 //media queries
 
 @media screen and (max-width: 1100px) {
-    header, #avatar-area , #portfolio-area  , #footer-area  {
-        .container {
-            width: 100%;
-          }
+    .container {
+        width: 100%;
     }
+
+    #avatar-area {
+        height: unset;
+        padding: 100px 0;
+    }
+
     #contact-area {
         .container {
-            padding:1rem 9%;
-            width: 100%;
             text-align: center;
+            .contact-text {
+                font-size: 36px;
+            }
+
+            form {
+                width: 90%;
+            }
         }
-       }
+    }
+
+    #footer-area {
+        .container {
+            .box {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 992px) {
-     #header, #avatar-area , #portfolio-area , #about-area , #footer-area  {
-        .container {
-            width: 100%;
-          }
-    }
     #header {
         .container {
             .logo-text {
@@ -468,20 +479,19 @@ body, html {
     }
     #avatar-area {
         .start-text {
-            font-size: 3.1rem;
+            font-size: 43px;
         }
         .jobs-text {
-            font-size: 1.5rem;
+            font-size: 18px;
+            transform: translateY(20px);
         }
     }
 
     #portfolio-area  {
-        width: 100%;
         .container {
            .box-area {
-           display: grid;
-           grid-template-columns: repeat(2,1fr);
-           padding: 0 50px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
            }
         }
     }
@@ -522,18 +532,12 @@ body, html {
 }
 
 @media screen and (max-width: 768px) {
-    header, #avatar-area , #portfolio-area , #about-area  , #footer-area  {
-       .container {
-           width: 100%;
-         }
-   }
    #portfolio-area  {
     .container {
-        margin:auto;
         .box-area {
             display: flex;
             flex-direction: column;
-            }
+        }
     }
 }
    #about-area {
@@ -551,64 +555,11 @@ body, html {
        }
    }
 
-   #contact-area {
-    .container {
-       width: 100%;
-        text-align: center;
-    }
-   }
-}
-
-
-@media screen and (max-width: 767px) {
-    header, #avatar-area  , #about-area  , #footer-area  {
-       .container {
-           width: 100%;
-         }
-   }
-   #portfolio-area  {
-    .container {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        .box-area {
-            display: flex;
-            flex-direction: column;
-           }
-    }
-}
-   #about-area {
-       .container{
-              .text-area {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: stretch;
-                    justify-content: center;
-                    padding:0 10px;
-              }
-            .buttons {
-                margin-top:50px;
-            }
-       }
-   }
-
-   #contact-area {
-    .container {
-        text-align: center;
-    }
-   }
 }
 
 @media screen and (max-width: 568px) {
-    header, #avatar-area  , #about-area  , #footer-area  {
-       .container {
-           width: 100%;
-         }
-   }
    #portfolio-area  {
     .container {
-        width: 100%;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -634,11 +585,5 @@ body, html {
                 margin-top:50px;
             }
        }
-   }
-
-   #contact-area {
-    .container {
-        text-align: center;
-    }
    }
 }
